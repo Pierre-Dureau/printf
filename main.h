@@ -5,6 +5,11 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+/**
+ * struct Specifier - Struct specifier
+ * @c: The specifier
+ * @f: The function
+ */
 typedef struct Specifier
 {
 	char c;

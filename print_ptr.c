@@ -30,5 +30,6 @@ int print_adresse(va_list list)
 		return (_puts(ptr) + 1);
 	}
 	else
-		return (0);
+		return (_puts("(nil)") + 1);
+
 }
