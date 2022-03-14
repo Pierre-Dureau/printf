@@ -32,7 +32,7 @@ int _puts(char *str)
 		return (i);
 	}
 	else
-		return (-1);
+		return (0);
 }
 
 /**
