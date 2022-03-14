@@ -59,7 +59,7 @@ If successful, _printf would return the number of characters the function printe
 If _printf failed, it would return the value -1.
 
 .SH EXAMPLES
-_printf("Hello %c", 'E'); \fB Output : Hello E\fP
+_printf("Hello %c", '!'); \fB Output : Hello !\fP
 .sp 1
 _printf("Hello %s", "World"); \fB Output : Hello World\fP
 .sp 1
@@ -69,6 +69,16 @@ _printf("%%"); \fB Output : %\fP
 .sp 1
 _printf("%i", 2); \fB Output : 2\fP
 .sp 1
-_printf("%s%s", "Hello", " World"); \fB Output : Hello World\fP
+_printf("%b", 7); \fB Output : 111\fP
 .sp 1
-
+_printf("%u", 3147593600); \fB Output : 3147593600\fP
+.sp 1
+_printf("%o", 90); \fB Output : 132\fP
+.sp 1
+_printf("%x", 908); \fB Output : 38c\fP
+.sp 1
+_printf("%X", 1115); \fB Output : 45B\fP
+.sp 1
+_printf("%S", "Best\\nSchool"); \fB Output : Best\\x0ASchool\fP
+.sp 1
+_printf("%p", &var); \fB Output : 0x7ffe637541f0\fP
