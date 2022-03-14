@@ -49,16 +49,29 @@ The int argument is converted to signed decimal notation.
 Print an unsigned integer as binary (0 1) \- Doesn't exist on the real printf.
 .TP
 \fBu\fP
-Print an unsigned integer (0 to 4,294,967,295).
+Print an unsigned integer (0 to 4 294 967 295).
 .TP
 \fBo\fP
-Print an unsigned integer in base 8 (0 1 2 3 4 5 6 7).
-x print an unsigned integer in base 16 (0 1 2 3 4 5 6 7 8 9 a b c d e f)
-X same as x, but the letters are in uppercase (A B C D E F)
-S same as s, but the non-printable characters (32 < ASCII value >= 127) are replaced by "\\x" and their hexadecimal value in uppercase with 2 characters
-p print an address
-r print a string in reverse
-R print a string encoded in rot13
+Print an unsigned integer in base 8.
+.TP
+\fBx\fP
+Print an unsigned integer in base 16 with the letters in lowercase (a b c d e f).
+.TP
+\fBX\fP
+Same as 'x', but the letters are in uppercase (A B C D E F).
+.TP
+\fBS\fP
+Same as 's', but the non-printable characters (32 < ASCII value >= 127) are replaced by "\\x" and their hexadecimal value in       uppercase with 2 characters
+\- Doesn't exist on the real printf.
+.TP
+\fBp\fP
+Print the address of a variable.
+.TP
+\fBr\fP
+Print a string in reverse. \- Doesn't exist on the real printf.
+.TP
+\fBR\fP
+Print a string encoded in rot13. \- Doesn't exist on the real printf.
 
 .SH RETURN VALUE:
 If successful, _printf would return the number of characters the function printed, excluding the '\\0' indicating the end of the string.
@@ -66,13 +79,6 @@ If successful, _printf would return the number of characters the function printe
 If _printf failed, it would return the value -1.
 
 .SH EXAMPLES
-_printf("Hello %c", '!'); \fBOutput : Hello !\fP
-.sp
-_printf("Hello %s", "World"); \fBOutput : Hello World\fP
-.sp
-_printf("%d", 5678); \fBOutput: 5678\fP
-.sp
-_printf("%%"); \fBOutput : %\fP
 .sp
 _printf("%i", 2); \fBOutput : 2\fP
 .sp
