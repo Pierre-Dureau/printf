@@ -12,10 +12,10 @@ int _printf(const char *format, ...)
 	int (*ptr)(va_list);
 	va_list list;
 
-	va_start(list, format);
-
-	if (!format || (format[i] == '%' && !format[i + 1]))
+	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
+
+	va_start(list, format);
 
 	for (; format[i]; i++)
 	{
@@ -30,6 +30,8 @@ int _printf(const char *format, ...)
 			ptr = get_specifier(format[i]);
 			if (ptr)
 				nb += ptr(list);
+			else
+				_putchar('%');
 		}
 		else
 			nb += _putchar(format[i]);
