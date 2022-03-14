@@ -15,9 +15,14 @@ int (*get_specifier(char c))(va_list)
 		{'c', print_char},
 		{'d', print_int},
 		{'i', print_int},
+		{'b', print_binary},
+		{'o', print_octal},
+		{'x', print_hex},
+		{'X', print_hex_maj},
+		{'u', print_unsigned}
 		};
 
-	for (i = 0; i < 4; i++)
+	for (i = 0; i < 9; i++)
 	{
 		if (function[i].c == c)
 			return (function[i].f);

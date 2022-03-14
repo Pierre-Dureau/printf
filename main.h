@@ -3,6 +3,7 @@
 
 #include <stdarg.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 typedef struct Specifier
 {
@@ -21,5 +22,11 @@ int print_string(va_list list);
 int print_char(va_list list);
 int countDigit(int n);
 int print_int(va_list list);
+
+int print_binary(va_list);
+int print_octal(va_list);
+int print_hex(va_list);
+int print_hex_maj(va_list);
+int print_unsigned(va_list);
 
 #endif /* MAIN_H */

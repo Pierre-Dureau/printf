@@ -32,3 +32,32 @@ int print_int(va_list list)
 	print_number(n);
 	return(count);
 }
+
+int u_countDigit(unsigned int n)
+{
+	int len = 1;
+
+	while (n / 10)
+	{
+		n /= 10;
+		len *= 10;
+	}
+	return (len);
+}
+
+int print_unsigned(va_list arg)
+{
+	int nb_char = 0, digit, c;
+	unsigned int n = va_arg(arg, unsigned int);
+
+	digit = u_countDigit(n);
+	while (digit)
+	{
+		c = n / digit + '0';
+		write(1, &c, 1);
+		nb_char++;
+		n %= digit;
+		digit /= 10;
+	}
+	return (nb_char);
+}
