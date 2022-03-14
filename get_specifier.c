@@ -22,10 +22,11 @@ int (*get_specifier(char c))(va_list)
 		{'u', print_unsigned},
 		{'r', print_rev},
 		{'R', print_rot13},
-		{'p', print_adresse}
+		{'p', print_adresse},
+		{'S', custom_string}
 		};
 
-	for (i = 0; i < 12; i++)
+	for (i = 0; i < 13; i++)
 	{
 		if (function[i].c == c)
 			return (function[i].f);
