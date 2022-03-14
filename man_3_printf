@@ -87,3 +87,8 @@ _printf("%r", "Hello!"); \fB Output : !olleH\fP
 .sp 1
 _printf("%r", "Hello!"); \fB Output : Uryyb!\fP
 
+.SH SEE ALSO
+
+\fB Man page of the real printf function\fP
+.sp 0
+https://man7.org/linux/man-pages/man3/printf.3.html
