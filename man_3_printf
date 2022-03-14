@@ -16,8 +16,8 @@ _printf \- formatted output conversion
 The _printf function prints values on the terminal. The output produced depends on the format. _printf is a variadic function, meaning it can
 take a variable number of arguments.
 
-.SS Format:
-Format is a const char* variable (which means it's a string), it must start and end by a double quote ("). The format string can have normal characters that are printed and
+.SS Format string:
+The format string must start and end with a double quote ("). The format string can have normal characters that are printed and
 conversion specifiers. Conversion specifiers start with a percentage sign (%) then one or more characters.
 
 Example : _printf("Hello everyone at %s", "Holberton School"); => The format string is "Hello everyone at %s".
