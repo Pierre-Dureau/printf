@@ -1,0 +1,64 @@
+.\" Manpage for _printf
+.\" contact 4256@holbertonschool.com or 4281@holbertonschool.com to correct error or typos
+.TH _printf 3 "15 mars 2022" "1.0" "_printf man page"
+.SH NAME
+_printf \- formatted output conversion
+.SH SYNOPSIS
+\fB #include "main.h"
+\fB #include <stdarg.h>
+\fB #include <stdlib.h>
+\fB #include <unistd.h>
+
+\fB int _printf(const char *format, ...);
+.SH DESCRIPTION
+
+.SS Definition:
+The _printf function prints values on the terminal. The output produced depends on the format. _printf is a variadic function, meaning it can
+take a variable number of arguments.
+
+.SS Format:
+Format is a const char* variable (which means it's a string), it must start and end by a double quote ("). The format string can have normal characters that are printed and
+conversion specifiers. Conversion specifiers start with a percentage sign (%) then one or more characters.
+
+Example : _printf("Hello everyone at %s", "Holberton School"); => The format string is "Hello everyone at %s".
+
+.SS Variable arguments:
+A comma is put after the format string and then the variable arguments must correspond in order to the conversion specifiers that are inside
+the format string.
+
+.SS Conversion specifiers:
+A conversion specifiers is a combination of a percent sign and one or several characters that specify the type of the variable. The different
+specifiers supported are:
+
+.TS
+allbox tab(|);
+c s s
+c s c
+c s c
+c s c.
+Variable arguments
+%c | print a single character
+%s | print a string of characters
+%% | print a single percent sign (%)
+%d | print a decimal (base 10) number
+%i | print an integer in base 10
+%b | print a number or a character as binary (0 1)
+%u | print an unsigned integer (0 to 4,294,967,295)
+%o | print an unsigned integer in base 8 (0 1 2 3 4 5 6 7)
+%x | print an unsigned integer in base 16 (0 1 2 3 4 5 6 7 8 9 a b c d e f)
+%X | same as %x, but the letters are in uppercase (A B C D E F)
+%S | same as %s, but the non-printable characters (32 < ASCII value >= 127) are replaced by "\\x" and their hexadecimal value in uppercase with 2 characters
+%p | print an address
+%r | print a string in reverse
+%R | print a string encoded in rot13
+.TE
+
+.SH RETURN value:
+If successful, _printf would return the number of characters the function printed, excluding the '\\0' indicating the end of the string.
+If _printf failed, it would return the value -1.
+
+.SH EXAMPLES
+_printf("Hello %c", 'H');
+\fB Output: Hello H\fP
+_printf("Hello %d", 'H');
+\fB Output: Hello H\fP
