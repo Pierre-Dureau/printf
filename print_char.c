@@ -8,7 +8,12 @@
 
 int print_string(va_list list)
 {
-	return (_puts(va_arg(list, char *)));
+	char *s = va_arg(list, char *);
+
+	if (!s)
+		s = "(null)";
+
+	return (_puts(s));
 }
 
 /**
