@@ -46,19 +46,19 @@ A '%' is printed. The conversion specification is "%%" to print a single '%'.
 The int argument is converted to signed decimal notation.
 .TP
 \fBb\fP
-Print an unsigned integer as binary (0 1) \- Doesn't exist on the real printf.
+Print an unsigned integer as binary (01) \- Doesn't exist on the real printf.
 .TP
 \fBu\fP
-Print an unsigned integer (0 to 4 294 967 295).
+Print an unsigned integer (0 to 4,294,967,295).
 .TP
 \fBo\fP
 Print an unsigned integer in base 8.
 .TP
 \fBx\fP
-Print an unsigned integer in base 16 with the letters in lowercase (a b c d e f).
+Print an unsigned integer in base 16 with the letters in lowercase (abcdef).
 .TP
 \fBX\fP
-Same as 'x', but the letters are in uppercase (A B C D E F).
+Same as 'x', but the letters are in uppercase (ABCDEF).
 .TP
 \fBS\fP
 Same as 's', but the non-printable characters (32 < ASCII value >= 127) are replaced by "\\x" and their hexadecimal value in       uppercase with 2 characters
