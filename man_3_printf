@@ -53,12 +53,22 @@ Variable arguments
 %R | print a string encoded in rot13
 .TE
 
-.SH RETURN value:
+.SH RETURN VALUE:
 If successful, _printf would return the number of characters the function printed, excluding the '\\0' indicating the end of the string.
+.sp 0
 If _printf failed, it would return the value -1.
 
 .SH EXAMPLES
-_printf("Hello %c", 'H');
-\fB Output: Hello H\fP
-_printf("Hello %d", 'H');
-\fB Output: Hello H\fP
+_printf("Hello %c", 'E'); \fB Output : Hello E\fP
+.sp 1
+_printf("Hello %s", "World"); \fB Output : Hello World\fP
+.sp 1
+_printf("%d", 5678); \fB Output: 5678\fP
+.sp 1
+_printf("%%"); \fB Output : %\fP
+.sp 1
+_printf("%i", 2); \fB Output : 2\fP
+.sp 1
+_printf("%s%s", "Hello", " World"); \fB Output : Hello World\fP
+.sp 1
+
