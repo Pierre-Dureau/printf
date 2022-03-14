@@ -59,38 +59,41 @@ If successful, _printf would return the number of characters the function printe
 If _printf failed, it would return the value -1.
 
 .SH EXAMPLES
-_printf("Hello %c", '!'); \fB Output : Hello !\fP
+_printf("Hello %c", '!'); \fBOutput : Hello !\fP
 .sp
-_printf("Hello %s", "World"); \fB Output : Hello World\fP
+_printf("Hello %s", "World"); \fBOutput : Hello World\fP
 .sp
-_printf("%d", 5678); \fB Output: 5678\fP
+_printf("%d", 5678); \fBOutput: 5678\fP
 .sp
-_printf("%%"); \fB Output : %\fP
+_printf("%%"); \fBOutput : %\fP
 .sp
-_printf("%i", 2); \fB Output : 2\fP
+_printf("%i", 2); \fBOutput : 2\fP
 .sp
-_printf("%b", 7); \fB Output : 111\fP
+_printf("%b", 7); \fBOutput : 111\fP
 .sp
-_printf("%u", 3147593600); \fB Output : 3147593600\fP
+_printf("%u", 3147593600); \fBOutput : 3147593600\fP
 .sp
-_printf("%o", 90); \fB Output : 132\fP
+_printf("%o", 90); \fBOutput : 132\fP
 .sp
-_printf("%x", 908); \fB Output : 38c\fP
+_printf("%x", 908); \fBOutput : 38c\fP
 .sp
-_printf("%X", 1115); \fB Output : 45B\fP
+_printf("%X", 1115); \fBOutput : 45B\fP
 .sp
-_printf("%S", "Best\\nSchool"); \fB Output : Best\\x0ASchool\fP
+_printf("%S", "Best\\nSchool"); \fBOutput : Best\\x0ASchool\fP
 .sp
-_printf("%p", (void *)0x7ffe637541f0); \fB Output : 0x7ffe637541f0\fP
+_printf("%p", (void *)0x7ffe637541f0); \fBOutput : 0x7ffe637541f0\fP
 .sp
-_printf("%r", "Hello!"); \fB Output : !olleH\fP
+_printf("%r", "Hello!"); \fBOutput : !olleH\fP
 .sp
-_printf("%r", "Hello!"); \fB Output : Uryyb!\fP
+_printf("%r", "My message"); \fBOutput : Zl zrffntr\fP
 
 .SH SEE ALSO
-\fB Man page of the real printf function\fP
+\fBman page of the real printf function\fP
 .sp 0
 https://man7.org/linux/man-pages/man3/printf.3.html
 
 .SH AUTHORS
 Alexandre DUTERTRE, Pierre DUREAU and Jay MESNIL
+
+.SH COPYRIGHTS
+©HOLBERTON SCHOOL LAVAL
