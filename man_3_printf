@@ -60,35 +60,37 @@ If _printf failed, it would return the value -1.
 
 .SH EXAMPLES
 _printf("Hello %c", '!'); \fB Output : Hello !\fP
-.sp 1
+.sp
 _printf("Hello %s", "World"); \fB Output : Hello World\fP
-.sp 1
+.sp
 _printf("%d", 5678); \fB Output: 5678\fP
-.sp 1
+.sp
 _printf("%%"); \fB Output : %\fP
-.sp 1
+.sp
 _printf("%i", 2); \fB Output : 2\fP
-.sp 1
+.sp
 _printf("%b", 7); \fB Output : 111\fP
-.sp 1
+.sp
 _printf("%u", 3147593600); \fB Output : 3147593600\fP
-.sp 1
+.sp
 _printf("%o", 90); \fB Output : 132\fP
-.sp 1
+.sp
 _printf("%x", 908); \fB Output : 38c\fP
-.sp 1
+.sp
 _printf("%X", 1115); \fB Output : 45B\fP
-.sp 1
+.sp
 _printf("%S", "Best\\nSchool"); \fB Output : Best\\x0ASchool\fP
-.sp 1
+.sp
 _printf("%p", (void *)0x7ffe637541f0); \fB Output : 0x7ffe637541f0\fP
-.sp 1
+.sp
 _printf("%r", "Hello!"); \fB Output : !olleH\fP
-.sp 1
+.sp
 _printf("%r", "Hello!"); \fB Output : Uryyb!\fP
 
 .SH SEE ALSO
-
 \fB Man page of the real printf function\fP
 .sp 0
 https://man7.org/linux/man-pages/man3/printf.3.html
+
+.SH AUTHORS
+Alexandre DUTERTRE, Pierre DUREAU and Jay MESNIL
