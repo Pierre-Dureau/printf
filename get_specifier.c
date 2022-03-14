@@ -3,8 +3,8 @@
 /**
  * get_specifier - Get the specifier object
  *
- * @param c
- * @return int(*)(va_list)
+ * @c: The specifier
+ * Return: The pointer to the function
  */
 
 int (*get_specifier(char c))(va_list)
@@ -21,10 +21,11 @@ int (*get_specifier(char c))(va_list)
 		{'X', print_hex_maj},
 		{'u', print_unsigned},
 		{'r', print_rev},
-		{'R', print_rot13}
+		{'R', print_rot13},
+		{'p', print_adresse}
 		};
 
-	for (i = 0; i < 11; i++)
+	for (i = 0; i < 12; i++)
 	{
 		if (function[i].c == c)
 			return (function[i].f);

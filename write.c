@@ -17,8 +17,8 @@ int _putchar(char c)
 
 /**
  * _puts - Print a string
- *
  * @str: the string
+ * Return: Number of char printed
  */
 
 int _puts(char *str)

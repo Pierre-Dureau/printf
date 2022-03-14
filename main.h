@@ -32,4 +32,6 @@ int print_unsigned(va_list);
 int print_rot13(va_list);
 int print_rev(va_list);
 
+int print_adresse(va_list list);
+
 #endif /* MAIN_H */

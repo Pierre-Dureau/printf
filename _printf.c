@@ -1,17 +1,15 @@
 #include "main.h"
 
 /**
- * @brief
- *
- * @param format
- * @param ...
- * @return int
+ * _printf - Produce output according to a format
+ * @format: The string containing the format
+ * Return: Number of printed char
  */
 
 int _printf(const char *format, ...)
 {
 	int nb = 0, i = 0;
-	int (* ptr)(va_list);
+	int (*ptr)(va_list);
 	va_list list;
 
 	va_start(list, format);
