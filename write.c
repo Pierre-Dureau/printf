@@ -22,12 +22,17 @@ int _puts(char *str)
 {
 	int i = 0;
 
-	while (str[i])
+	if (str)
 	{
-		_putchar(str[i]);
-		i++;
+		while (str[i])
+		{
+			_putchar(str[i]);
+			i++;
+		}
+		return (i - 1);
 	}
-	return (i - 1);
+	else
+		return (-1);
 }
 
 /**
