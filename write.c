@@ -29,7 +29,7 @@ int _puts(char *str)
 			_putchar(str[i]);
 			i++;
 		}
-		return (i - 1);
+		return (i);
 	}
 	else
 		return (-1);
