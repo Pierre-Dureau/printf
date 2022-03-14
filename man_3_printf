@@ -81,4 +81,9 @@ _printf("%X", 1115); \fB Output : 45B\fP
 .sp 1
 _printf("%S", "Best\\nSchool"); \fB Output : Best\\x0ASchool\fP
 .sp 1
-_printf("%p", &var); \fB Output : 0x7ffe637541f0\fP
+_printf("%p", (void *)0x7ffe637541f0); \fB Output : 0x7ffe637541f0\fP
+.sp 1
+_printf("%r", "Hello!"); \fB Output : !olleH\fP
+.sp 1
+_printf("%r", "Hello!"); \fB Output : Uryyb!\fP
+
