@@ -31,7 +31,10 @@ int _printf(const char *format, ...)
 			if (ptr)
 				nb += ptr(list);
 			else
-				_putchar('%');
+			{
+				nb += _putchar('%');
+				nb += _putchar(format[i]);
+			}
 		}
 		else
 			nb += _putchar(format[i]);
