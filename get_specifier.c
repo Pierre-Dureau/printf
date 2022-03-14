@@ -19,10 +19,12 @@ int (*get_specifier(char c))(va_list)
 		{'o', print_octal},
 		{'x', print_hex},
 		{'X', print_hex_maj},
-		{'u', print_unsigned}
+		{'u', print_unsigned},
+		{'r', print_rev},
+		{'R', print_rot13}
 		};
 
-	for (i = 0; i < 9; i++)
+	for (i = 0; i < 11; i++)
 	{
 		if (function[i].c == c)
 			return (function[i].f);

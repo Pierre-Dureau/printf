@@ -30,9 +30,14 @@ int print_int(va_list list)
 	int count = countDigit(n);
 
 	print_number(n);
-	return(count);
+	return (count);
 }
 
+/**
+ * u_countDigit - Count the number of digit in an unsigned int
+ * @n: The unsigned int
+ * Return: The count
+ */
 int u_countDigit(unsigned int n)
 {
 	int len = 1;
@@ -45,16 +50,20 @@ int u_countDigit(unsigned int n)
 	return (len);
 }
 
+/**
+ * print_unsigned - Print an unsigned int
+ * @arg: parameter to print
+ * Return: Number of printed char
+ */
 int print_unsigned(va_list arg)
 {
-	int nb_char = 0, digit, c;
+	int nb_char = 0, digit;
 	unsigned int n = va_arg(arg, unsigned int);
 
 	digit = u_countDigit(n);
 	while (digit)
 	{
-		c = n / digit + '0';
-		write(1, &c, 1);
+		_putchar(n / digit + '0');
 		nb_char++;
 		n %= digit;
 		digit /= 10;

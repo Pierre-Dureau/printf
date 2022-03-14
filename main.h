@@ -29,4 +29,7 @@ int print_hex(va_list);
 int print_hex_maj(va_list);
 int print_unsigned(va_list);
 
+int print_rot13(va_list);
+int print_rev(va_list);
+
 #endif /* MAIN_H */
