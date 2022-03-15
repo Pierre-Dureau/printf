@@ -1,5 +1,5 @@
 .\" Manpage for _printf
-.\" contact 4256@holbertonschool.com or 4281@holbertonschool.com to correct error or typos
+.\" contact dureaupierre53@gmail.com or dutertre.alexandre@laposte.net to correct error or typos
 .TH _printf 3 "15 mars 2022" "1.0" "_printf man page"
 .SH NAME
 _printf \- formatted output conversion
@@ -61,7 +61,7 @@ Print an unsigned integer in base 16 with the letters in lowercase (abcdef).
 Same as 'x', but the letters are in uppercase (ABCDEF).
 .TP
 \fBS\fP
-Same as 's', but the non-printable characters (32 < ASCII value >= 127) are replaced by "\\x" and their hexadecimal value in uppercase with 2 characters
+Same as 's', but the non-printable characters (32 < ASCII value >= 127) appear as "\\x" and their hexadecimal value in uppercase with 2 characters
 \- Doesn't exist on the real printf.
 .TP
 \fBp\fP
