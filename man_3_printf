@@ -25,15 +25,21 @@ there may be zero or more flags.
 Example : _printf("Hello everyone at %s", "Holberton School"); => The format string is "Hello everyone at %s".
 
 .SS Variable arguments:
-A comma is put after the format string and then the variable arguments must correspond in order to the conversion specifiers that are inside
-the format string.
+The variable arguments must correspond in order to the conversion specifiers that are inside the format string.
+
+.SS Flag characters:
+The character '%' is followed by zero or more of the following flags:
+
+.TP
+\fB+\fP
+
 
 .SS Conversion specifiers:
 A characters that specifies the type of conversion to be applied. The different specifiers supported are:
 
 .TP
 \fBc\fP
-The int argument is converted to an unsigned char, and the resulting character is printed.
+The int argument is converted to an unsigned char, and the resulting character is printed according to the ASCII value.
 .TP
 \fBs\fP
 The char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are printed up to a terminating
