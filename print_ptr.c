@@ -42,6 +42,6 @@ int print_adresse(va_list list, flag_t flag)
 		return (_puts(ptr) + m);
 	}
 	else
-		return (_puts("(nil)") + 1);
+		return (_puts("(nil)"));
 
 }
