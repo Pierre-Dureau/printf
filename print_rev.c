@@ -29,5 +29,6 @@ int print_rev(va_list arg, flag_t flag)
 		_putchar(s[i]);
 		nb_char++;
 	}
+	(void)flag;
 	return (nb_char);
 }

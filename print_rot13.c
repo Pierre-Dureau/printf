@@ -25,5 +25,6 @@ int print_rot13(va_list arg, flag_t flag)
 		if (str[i] != ch1[j])
 			_putchar(str[i]);
 	}
+	(void)flag;
 	return (nb_char);
 }

@@ -7,7 +7,7 @@
  */
 int print_binary(va_list arg, flag_t flag)
 {
-	int nb_char;
+	int nb_char = 0;
 	unsigned int num = va_arg(arg, unsigned int);
 	static char buffer[33];
 	char *ptr;
@@ -19,6 +19,7 @@ int print_binary(va_list arg, flag_t flag)
 		num /= 2;
 	} while (num != 0);
 	nb_char = _puts(ptr);
+	(void)flag;
 	return (nb_char);
 }
 /**
@@ -29,7 +30,7 @@ int print_binary(va_list arg, flag_t flag)
  */
 int print_octal(va_list arg, flag_t flag)
 {
-	int nb_char;
+	int nb_char = 0;
 	unsigned int num = va_arg(arg, unsigned int);
 	static char buffer[13];
 	char *ptr;
@@ -53,7 +54,7 @@ int print_octal(va_list arg, flag_t flag)
  */
 int print_hex(va_list arg, flag_t flag)
 {
-	int nb_char;
+	int nb_char = 0;
 	unsigned int num = va_arg(arg, unsigned int);
 	static const char number[] = "0123456789abcdef";
 	static char buffer[10];
@@ -78,7 +79,7 @@ int print_hex(va_list arg, flag_t flag)
  */
 int print_hex_maj(va_list arg, flag_t flag)
 {
-	int nb_char;
+	int nb_char = 0;
 	unsigned int num = va_arg(arg, unsigned int);
 	static const char number[] = "0123456789ABCDEF";
 	static char buffer[10];
