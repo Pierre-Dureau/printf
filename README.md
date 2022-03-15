@@ -66,7 +66,7 @@ These are all the tasks of this project, the ones that are completed link to the
 ### [7. How is the world ruled and led to war? Diplomats lie to journalists and believe these lies when they see them in print](./print_ptr.c)
 * Handle the following conversion specifier:
   - p : int input is converted to a pointer address
-### [8. The big print gives and the small print takes away]
+### [8. The big print gives and the small print takes away](./_printf.c)
 * Handle the following flag characters for non-custom conversion specifiers:
   - \+ : adds a \+ in front of signed positive numbers and a \- in front of signed negative numbers
   - space : same as \+, but adds a space (is overwritten by \+)
