@@ -2,6 +2,7 @@
 
 /**
  * print_string - Print a string
+ * @flag: Flag parameters
  * @list: A string of the list
  * Return: Number of char printed
  */
@@ -18,6 +19,7 @@ int print_string(va_list list, flag_t flag)
 
 /**
  * print_char - Print a char
+ * @flag: Flag parameters
  * @list: A char of the list
  * Return: Number of char printed
  */
