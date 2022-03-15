@@ -21,7 +21,7 @@ int heX(unsigned int num)
 	} while (num != 0);
 	if (base <= 15)
 		*--ptr = '0';
-	nb_char = print_str(ptr);
+	nb_char = _puts(ptr);
 	return (nb_char);
 }
 

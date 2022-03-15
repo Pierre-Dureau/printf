@@ -1,23 +1,8 @@
 #include "main.h"
 /**
- * print_str - print string for the base functions below
- * @str: string to print
- * Return: number of printed char
- */
-int print_str(char *str)
-{
-	int i, nb_char = 0;
-
-	for (i = 0; str[i]; i++)
-	{
-		write(1, &str[i], 1);
-		nb_char++;
-	}
-	return (nb_char);
-}
-/**
  * print_binary - convert into binary and print
  * @arg: parameter to convert
+ * @flag: flag parameter
  * Return: number of printed char
  */
 int print_binary(va_list arg, flag_t flag)
@@ -33,12 +18,13 @@ int print_binary(va_list arg, flag_t flag)
 		*--ptr = (num % 2) + '0';
 		num /= 2;
 	} while (num != 0);
-	nb_char = print_str(ptr);
+	nb_char = _puts(ptr);
 	return (nb_char);
 }
 /**
  * print_octal - convert into octal and print
  * @arg: parameter to convert
+ * @flag: flag parameter
  * Return: number of printed char
  */
 int print_octal(va_list arg, flag_t flag)
@@ -54,12 +40,15 @@ int print_octal(va_list arg, flag_t flag)
 		*--ptr = (num % 8) + '0';
 		num /= 8;
 	} while (num != 0);
-	nb_char = print_str(ptr);
+	if (flag.diese == 1)
+		nb_char += _putchar('0');
+	nb_char += _puts(ptr);
 	return (nb_char);
 }
 /**
  * print_hex - convert into hex and print
  * @arg: parameter to convert
+ * @flag: flag parameter
  * Return: number of printed char
  */
 int print_hex(va_list arg, flag_t flag)
@@ -76,12 +65,15 @@ int print_hex(va_list arg, flag_t flag)
 		*--ptr = number[num % 16];
 		num /= 16;
 	} while (num != 0);
-	nb_char = print_str(ptr);
+	if (flag.diese == 1)
+		nb_char += _puts("0x");
+	nb_char += _puts(ptr);
 	return (nb_char);
 }
 /**
  * print_hex_maj - convert into hex and print
  * @arg: parameter to convert
+ * @flag: flag parameter
  * Return: number of printed char
  */
 int print_hex_maj(va_list arg, flag_t flag)
@@ -98,6 +90,8 @@ int print_hex_maj(va_list arg, flag_t flag)
 		*--ptr = number[num % 16];
 		num /= 16;
 	} while (num != 0);
-	nb_char = print_str(ptr);
+	if (flag.diese == 1)
+		nb_char += _puts("0X");
+	nb_char += _puts(ptr);
 	return (nb_char);
 }

@@ -37,7 +37,6 @@ int print_string(va_list, flag_t);
 int print_char(va_list, flag_t);
 int countDigit(int n);
 int print_int(va_list, flag_t);
-int print_str(char *);
 int print_binary(va_list, flag_t);
 int print_octal(va_list, flag_t);
 int print_hex(va_list, flag_t);
