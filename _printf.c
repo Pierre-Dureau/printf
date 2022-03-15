@@ -2,6 +2,31 @@
 #include <string.h>
 
 /**
+ * get_flags - Get the flags object
+ * @s: The string
+ * Return: The flag
+ */
+
+flag_t get_flags(const char *s)
+{
+	flag_t flag = {0, 0, 0, 0};
+
+	while (*s == '+' || *s == ' ' || *s == '#')
+	{
+		if (*s == '+')
+			flag.plus = 1;
+		if (*s == ' ')
+			flag.space = 1;
+		if (*s == '#')
+			flag.diese = 1;
+		s++;
+		flag.count += 1;
+	}
+
+	return (flag);
+}
+
+/**
  * _printf - Produce output according to a format
  * @format: The string containing the format
  * Return: Number of printed char
@@ -49,29 +74,4 @@ int _printf(const char *format, ...)
 	}
 	va_end(list);
 	return (nb);
-}
-
-/**
- * get_flags - Get the flags object
- * @s: The string
- * Return: The flag
- */
-
-flag_t get_flags(const char *s)
-{
-	flag_t flag = {0, 0, 0, 0};
-
-	while (*s == '+' || *s == ' ' || *s == '#')
-	{
-		if (*s == '+')
-			flag.plus = 1;
-		if (*s == ' ')
-			flag.space = 1;
-		if (*s == '#')
-			flag.diese = 1;
-		s++;
-		flag.count += 1;
-	}
-
-	return (flag);
 }
