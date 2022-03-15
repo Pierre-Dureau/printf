@@ -47,5 +47,6 @@ int print_custom(va_list arg, flag_t flag)
 		else
 			nb_char += _putchar(str[i]);
 	}
+	(void)flag;
 	return (nb_char);
 }

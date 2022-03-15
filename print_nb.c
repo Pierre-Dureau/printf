@@ -75,5 +75,6 @@ int print_unsigned(va_list arg, flag_t flag)
 		n %= digit;
 		digit /= 10;
 	}
+	(void)flag;
 	return (nb_char);
 }

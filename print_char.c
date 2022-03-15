@@ -14,6 +14,7 @@ int print_string(va_list list, flag_t flag)
 	if (!s)
 		s = "(null)";
 
+	(void)flag;
 	return (_puts(s));
 }
 
@@ -26,6 +27,7 @@ int print_string(va_list list, flag_t flag)
 
 int print_char(va_list list, flag_t flag)
 {
+	(void)flag;
 	return (_putchar(va_arg(list, int)));
 }
 
