@@ -55,7 +55,7 @@ int print_octal(va_list arg, flag_t flag)
 int print_hex(va_list arg, flag_t flag)
 {
 	int nb_char = 0;
-	unsigned int num = va_arg(arg, unsigned int);
+	unsigned int num = va_arg(arg, unsigned int), base = num;
 	static const char number[] = "0123456789abcdef";
 	static char buffer[10];
 	char *ptr;
@@ -66,7 +66,7 @@ int print_hex(va_list arg, flag_t flag)
 		*--ptr = number[num % 16];
 		num /= 16;
 	} while (num != 0);
-	if (flag.diese == 1)
+	if (flag.diese == 1 && base != 0)
 		nb_char += _puts("0x");
 	nb_char += _puts(ptr);
 	return (nb_char);
@@ -80,7 +80,7 @@ int print_hex(va_list arg, flag_t flag)
 int print_hex_maj(va_list arg, flag_t flag)
 {
 	int nb_char = 0;
-	unsigned int num = va_arg(arg, unsigned int);
+	unsigned int num = va_arg(arg, unsigned int), base = num;;
 	static const char number[] = "0123456789ABCDEF";
 	static char buffer[10];
 	char *ptr;
@@ -91,7 +91,7 @@ int print_hex_maj(va_list arg, flag_t flag)
 		*--ptr = number[num % 16];
 		num /= 16;
 	} while (num != 0);
-	if (flag.diese == 1)
+	if (flag.diese == 1 && base != 0)
 		nb_char += _puts("0X");
 	nb_char += _puts(ptr);
 	return (nb_char);
