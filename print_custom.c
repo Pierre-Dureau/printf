@@ -7,7 +7,7 @@
  */
 int heX(unsigned int num)
 {
-	int nb_char;
+	int nb_char = 0;
 	unsigned int base = num;
 	static const char number[] = "0123456789ABCDEF";
 	static char buffer[10];
