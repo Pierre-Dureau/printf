@@ -32,6 +32,14 @@ The variable arguments must correspond in order to the conversion specifiers tha
 The character % is followed by zero or more of the following flags:
 
 .TP
+\fB+\fP
+A sign (+ or -) is placed before a number produced by a signed conversion. If the ' ' flag is after a + flag, the + flag overwrite the space flag.
+
+.TP
+\fB' '\fP
+(a space) A blank space is put before the number if the number is positive.
+
+.TP
 \fB#\fP
 The value takes an alternate form. For o conversions, the first character of the output is 0 except if the number to be printed is not zero already. In case of a x or X
 conversions, if the number to output is different of zero, 0x (in case of x) or OX (in case of X) are the first characters to be printed before the number.
