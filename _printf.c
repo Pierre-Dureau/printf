@@ -47,10 +47,15 @@ int _printf(const char *format, ...)
 		else
 			nb += _putchar(*format);
 	}
-
 	va_end(list);
 	return (nb);
 }
+
+/**
+ * get_flags - Get the flags object
+ * @s: The string
+ * Return: The flag
+ */
 
 flag_t get_flags(const char *s)
 {
