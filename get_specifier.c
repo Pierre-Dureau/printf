@@ -23,7 +23,7 @@ int (*get_specifier(char c))(va_list)
 		{'r', print_rev},
 		{'R', print_rot13},
 		{'p', print_adresse},
-		{'S', custom_string}
+		{'S', print_custom}
 		};
 
 	for (i = 0; i < 13; i++)
