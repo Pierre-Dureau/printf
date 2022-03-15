@@ -31,7 +31,7 @@ int print_binary(va_list arg, flag_t flag)
 int print_octal(va_list arg, flag_t flag)
 {
 	int nb_char = 0;
-	unsigned int num = va_arg(arg, unsigned int);
+	unsigned int num = va_arg(arg, unsigned int), base = num;
 	static char buffer[13];
 	char *ptr;
 
@@ -41,7 +41,7 @@ int print_octal(va_list arg, flag_t flag)
 		*--ptr = (num % 8) + '0';
 		num /= 8;
 	} while (num != 0);
-	if (flag.diese == 1)
+	if (flag.diese == 1 && base != 0)
 		nb_char += _putchar('0');
 	nb_char += _puts(ptr);
 	return (nb_char);
