@@ -20,7 +20,7 @@ int print_str(char *str)
  * @arg: parameter to convert
  * Return: number of printed char
  */
-int print_binary(va_list arg)
+int print_binary(va_list arg, flag_t flag)
 {
 	int nb_char;
 	unsigned int num = va_arg(arg, unsigned int);
@@ -41,7 +41,7 @@ int print_binary(va_list arg)
  * @arg: parameter to convert
  * Return: number of printed char
  */
-int print_octal(va_list arg)
+int print_octal(va_list arg, flag_t flag)
 {
 	int nb_char;
 	unsigned int num = va_arg(arg, unsigned int);
@@ -62,7 +62,7 @@ int print_octal(va_list arg)
  * @arg: parameter to convert
  * Return: number of printed char
  */
-int print_hex(va_list arg)
+int print_hex(va_list arg, flag_t flag)
 {
 	int nb_char;
 	unsigned int num = va_arg(arg, unsigned int);
@@ -84,7 +84,7 @@ int print_hex(va_list arg)
  * @arg: parameter to convert
  * Return: number of printed char
  */
-int print_hex_maj(va_list arg)
+int print_hex_maj(va_list arg, flag_t flag)
 {
 	int nb_char;
 	unsigned int num = va_arg(arg, unsigned int);

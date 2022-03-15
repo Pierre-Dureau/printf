@@ -7,7 +7,7 @@
  * Return: The pointer to the function
  */
 
-int (*get_specifier(char c))(va_list)
+int (*get_specifier(char c))(va_list, flag_t)
 {
 	int i;
 	spec_t function[] = {

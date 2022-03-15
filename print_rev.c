@@ -17,7 +17,7 @@ int _strlen(char *s)
  * @arg: parameter to print
  * Return: number of printed characters
  */
-int print_rev(va_list arg)
+int print_rev(va_list arg, flag_t flag)
 {
 	int length, i, nb_char = 0;
 	char *s = va_arg(arg, char *);

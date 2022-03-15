@@ -7,7 +7,7 @@
  * Return: Number of char printed
  */
 
-int print_adresse(va_list list)
+int print_adresse(va_list list, flag_t flag)
 {
 	unsigned long int num = va_arg(list, unsigned long int);
 

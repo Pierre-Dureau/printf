@@ -24,10 +24,15 @@ int countDigit(int n)
  * Return: Number of char printed
  */
 
-int print_int(va_list list)
+int print_int(va_list list, flag_t flag)
 {
 	int n = va_arg(list, int);
 	int count = countDigit(n);
+
+	if (flag.plus == 1 && n >= 0)
+		count += _putchar('+');
+	if (flag.space == 1 && flag.plus == 0)
+		count += _putchar(' ');
 
 	print_number(n);
 	return (count);
@@ -55,7 +60,7 @@ int u_countDigit(unsigned int n)
  * @arg: parameter to print
  * Return: Number of printed char
  */
-int print_unsigned(va_list arg)
+int print_unsigned(va_list arg, flag_t flag)
 {
 	int nb_char = 0, digit;
 	unsigned int n = va_arg(arg, unsigned int);

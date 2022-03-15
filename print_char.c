@@ -6,7 +6,7 @@
  * Return: Number of char printed
  */
 
-int print_string(va_list list)
+int print_string(va_list list, flag_t flag)
 {
 	char *s = va_arg(list, char *);
 
@@ -22,33 +22,8 @@ int print_string(va_list list)
  * Return: Number of char printed
  */
 
-int print_char(va_list list)
+int print_char(va_list list, flag_t flag)
 {
 	return (_putchar(va_arg(list, int)));
-}
-
-/**
- * heX - convert into hex and print
- * @num: number to convert
- * Return: number of printed char
- */
-int heX(unsigned int num)
-{
-	int nb_char;
-	unsigned int base = num;
-	static const char number[] = "0123456789ABCDEF";
-	static char buffer[10];
-	char *ptr;
-
-	ptr = &buffer[9];
-	*ptr = '\0';
-	do {
-		*--ptr = number[num % 16];
-		num /= 16;
-	} while (num != 0);
-	if (base <= 15)
-		*--ptr = '0';
-	nb_char = print_str(ptr);
-	return (nb_char);
 }
 

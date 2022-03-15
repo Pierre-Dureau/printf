@@ -4,7 +4,7 @@
  * @arg: parameter to encode
  * Return: number of printed char
  */
-int print_rot13(va_list arg)
+int print_rot13(va_list arg, flag_t flag)
 {
 	int i, j, nb_char = 0;
 	char ch1[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
