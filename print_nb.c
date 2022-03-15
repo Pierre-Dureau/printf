@@ -21,6 +21,7 @@ int countDigit(int n)
 /**
  * print_int - Print an int
  * @list: An int of the list
+ * @flag: Flag parameters
  * Return: Number of char printed
  */
 
@@ -58,6 +59,7 @@ int u_countDigit(unsigned int n)
 /**
  * print_unsigned - Print an unsigned int
  * @arg: parameter to print
+ * @flag: Flag parameters
  * Return: Number of printed char
  */
 int print_unsigned(va_list arg, flag_t flag)

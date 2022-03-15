@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * print_rot13 - print a string encoded using rot13
+ * @flag: Flag parameters
  * @arg: parameter to encode
  * Return: number of printed char
  */

@@ -8,6 +8,10 @@
 /**
  * struct Flag - Struct Flag
  *
+ * @plus: '+' char
+ * @space: ' ' char
+ * @diese: '#' char
+ * @count: number of flags
  */
 typedef struct Flag
 {

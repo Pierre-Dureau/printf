@@ -15,6 +15,7 @@ int _strlen(char *s)
 /**
  * print_rev - print a string in reverse
  * @arg: parameter to print
+ * @flag: Flag parameters
  * Return: number of printed characters
  */
 int print_rev(va_list arg, flag_t flag)

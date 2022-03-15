@@ -28,6 +28,7 @@ int heX(unsigned int num)
 /**
  * print_custom - print a string even non printable one via their hex value
  * @arg: parameter to print
+ * @flag: Flag parameters
  * Return: number of printed char
  */
 int print_custom(va_list arg, flag_t flag)
