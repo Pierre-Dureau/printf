@@ -32,7 +32,7 @@ int print_int(va_list list, flag_t flag)
 
 	if (flag.plus == 1 && n >= 0)
 		count += _putchar('+');
-	if (flag.space == 1 && flag.plus == 0)
+	if (flag.space == 1 && flag.plus == 0 && n >= 0)
 		count += _putchar(' ');
 
 	print_number(n);
