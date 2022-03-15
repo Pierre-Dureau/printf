@@ -80,7 +80,7 @@ int print_hex(va_list arg, flag_t flag)
 int print_hex_maj(va_list arg, flag_t flag)
 {
 	int nb_char = 0;
-	unsigned int num = va_arg(arg, unsigned int), base = num;;
+	unsigned int num = va_arg(arg, unsigned int), base = num;
 	static const char number[] = "0123456789ABCDEF";
 	static char buffer[10];
 	char *ptr;
