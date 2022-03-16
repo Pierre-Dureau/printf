@@ -36,6 +36,14 @@ along with regular characters
 | `%r` | print a string in reverse |
 | `%R` | print a string encoded in rot13 |
 
+## Flag Characters
+
+| Flag | Description
+| --- | --- |
+| `+` | A sign (+ or -) is placed before a number produced by a signed conversion. |
+| `' '` | (a space) A blank space is put before the number if the number is positive. |
+| `#` | The value takes an alternate form. For o conversions, the first character of the output is 0 except if the number to be printed is not zero already. In case of a x or X conversions, if the number to output is different of zero, 0x (in case of x) or OX (in case of X) are the first characters to be printed before the number. |
+
 # Tasks
 These are all the tasks of this project, the ones that are completed link to the corresponding files.
 ### [0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life](./_printf.c)
