@@ -64,7 +64,7 @@ along with regular characters
 
        _printf("%r", "Hello!"); Output : !olleH
 
-       _printf("%r", "My message"); Output : Zl zrffntr
+       _printf("%R", "My message"); Output : Zl zrffntr
 
 
 # Tasks
