@@ -12,5 +12,5 @@ int print_pourcent(va_list arg, flag_t flag)
 	(void)arg;
 	(void)flag;
 
-	return(_putchar('%'));
+	return (_putchar('%'));
 }
