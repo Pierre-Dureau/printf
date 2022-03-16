@@ -44,6 +44,29 @@ along with regular characters
 | `' '` | (a space) A blank space is put before the number if the number is positive. |
 | `#` | The value takes an alternate form. For o conversions, the first character of the output is 0 except if the number to be printed is not zero already. In case of a x or X conversions, if the number to output is different of zero, 0x (in case of x) or OX (in case of X) are the first characters to be printed before the number. |
 
+## Examples
+
+       _printf("%i", 2); Output : 2
+
+       _printf("%b", 7); Output : 111
+
+       _printf("%u", 3147593600); Output : 3147593600
+
+       _printf("%o", 90); Output : 132
+
+       _printf("%x", 908); Output : 38c
+
+       _printf("%X", 1115); Output : 45B
+
+       _printf("%S", "Best\nSchool"); Output : Best\x0ASchool
+
+       _printf("%p", (void *)0x7ffe637541f0); Output : 0x7ffe637541f0
+
+       _printf("%r", "Hello!"); Output : !olleH
+
+       _printf("%r", "My message"); Output : Zl zrffntr
+
+
 # Tasks
 These are all the tasks of this project, the ones that are completed link to the corresponding files.
 ### [0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life](./_printf.c)
