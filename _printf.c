@@ -50,11 +50,8 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			if (*format == '%')
-			{
-				nb += _putchar('%');
-				continue;
-			}
+			if (!*format)
+				break;
 			if (*format == '+' || *format == ' ' || *format == '#')
 			{
 				flag = get_flags(format);

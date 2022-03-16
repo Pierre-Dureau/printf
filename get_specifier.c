@@ -23,10 +23,11 @@ int (*get_specifier(char c))(va_list, flag_t)
 		{'r', print_rev},
 		{'R', print_rot13},
 		{'p', print_adresse},
-		{'S', print_custom}
+		{'S', print_custom},
+		{'%', print_pourcent}
 		};
 
-	for (i = 0; i < 13; i++)
+	for (i = 0; i < 14; i++)
 	{
 		if (function[i].c == c)
 			return (function[i].f);
