@@ -14,7 +14,7 @@ _printf \- formatted output conversion
 .SH DESCRIPTION
 
 .SS Definition:
-The function _printf write the output according to a format to \fLstdout\fP, the standard output. The output produced depends on the format. _printf is a variadic
+The function _printf write the output according to a format to stdout, the standard output. The output produced depends on the format. _printf is a variadic
 function, meaning it can take a variable number of arguments.
 
 .SS Format of the format string:
