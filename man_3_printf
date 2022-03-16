@@ -114,7 +114,7 @@ _printf("%p", (void *)0x7ffe637541f0); \fBOutput : 0x7ffe637541f0\fP
 .sp
 _printf("%r", "Hello!"); \fBOutput : !olleH\fP
 .sp
-_printf("%r", "My message"); \fBOutput : Zl zrffntr\fP
+_printf("%R", "My message"); \fBOutput : Zl zrffntr\fP
 
 .SH SEE ALSO
 \fBman page of the real printf function\fP
